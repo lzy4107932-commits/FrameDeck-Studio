@@ -1,7 +1,41 @@
 # FrameDeck Studio
 
-FrameDeck Studio is a desktop tool for arranging image collections
-into PowerPoint, PDF, and page-image exports.
+FrameDeck Studio is an open-source desktop application that turns image
+collections into structured, presentation-ready pages and exports them to
+PowerPoint, PDF, or page images.
+
+FrameDeck Studio 是一款开源桌面图片排版工具，可以将大量图片快速整理成结构清晰的多页版面，并导出为 PowerPoint、PDF 或单页图片。
+
+## About FrameDeck Studio / 软件介绍
+
+FrameDeck Studio is designed for workflows where many reference images need to
+be reviewed, grouped, reordered, titled, and presented consistently. Instead of
+manually placing every image in presentation software, users can choose a
+rows-by-columns layout, import an image collection, and let Auto Layout fill
+pages continuously. The generated pages remain editable: images can be moved
+within a page or across pages, copied, cut, pasted, cropped, titled, and
+rearranged before export.
+
+It is suitable for:
+
+- photography selection and contact-sheet presentations
+- visual reference boards and mood boards
+- character, costume, prop, and environment design collections
+- film, animation, game, advertising, and AI-art development reviews
+- product comparison, portfolio, archive, and teaching-material layouts
+
+### Core capabilities / 核心能力
+
+- Continuous Auto Layout with configurable rows, columns, gaps, and page size.
+- Confirm Layout mode for keeping page boundaries while making manual edits.
+- Page-aware drag-and-drop, including movement between different pages.
+- Project-level copy, cut, and paste into the currently selected page.
+- Non-destructive editable PowerPoint cropping that retains the full source
+  image for later reset or recropping.
+- Batch titles, page titles, footer/display options, and spacing controls.
+- Saveable .fds projects with undo/redo and automatic recovery support.
+- JPG, PNG, and HEIF/HEIC import, plus PowerPoint, PDF, and image export.
+- Chinese and English interfaces, five coordinated themes, and high-DPI support.
 
 ## v12.0.0 highlights
 
