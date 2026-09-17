@@ -1,0 +1,37 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements-build.txt
+      - name: Unit regressions
+        run: python -m unittest discover -s tests
+      - name: Auto Layout transaction
+        run: python tests/integration_auto_layout_transaction.py
+      - name: Editable PPT crop
+        run: python tests/integration_editable_ppt_crop.py
+      - name: Clipboard and page drag
+        run: |
+          python tests/integration_image_clipboard.py
+          python tests/integration_page_aware_image_drag.py
+      - name: Page, title, language, and performance checks
+        run: |
+          python tests/integration_page_delete.py
+          python tests/integration_title_geometry.py
+          python tests/integration_theme_language.py
+          python tests/integration_thumbnail_batching.py
+          python tests/benchmark_500_signatures.py

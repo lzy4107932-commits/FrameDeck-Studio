@@ -1,0 +1,143 @@
+{
+  "schema": "framedeck.template",
+  "schema_version": 1,
+  "id": "ai.character.turnaround",
+  "name": "角色标准多视图板",
+  "short_name": "角色多视图",
+  "category": "ai_character",
+  "description": "五个纵向人物框用于正面、3/4、侧面、背面与3/4背面展示。",
+  "fallback_settings": {
+    "rows": 1,
+    "cols": 5,
+    "page_size": "16:9",
+    "image_mode": "保持比例",
+    "show_title": true,
+    "title_text": "角色标准多视图 / CHARACTER TURNAROUND",
+    "subtitle_text": "Front · 3/4 Front · Side · Back · 3/4 Back",
+    "title_height": 1.15,
+    "logo_path": "",
+    "show_footer": true,
+    "footer_text": "PROJECT / CHARACTER / VERSION",
+    "show_filename": false,
+    "show_index": false,
+    "show_page_number": true,
+    "add_border": true,
+    "margin_left": 0.75,
+    "margin_right": 0.75,
+    "margin_top": 0.55,
+    "margin_bottom": 0.62,
+    "gap_x": 0.28,
+    "gap_y": 0.28,
+    "label_height": 0.38
+  },
+  "layout": {
+    "mode": "frames",
+    "coordinate_space": "normalized_slide",
+    "frames": [
+      {
+        "id": "view_1",
+        "type": "image",
+        "label": "正面",
+        "role": "turnaround",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.035,
+          "y": 0.16,
+          "w": 0.17,
+          "h": 0.72
+        }
+      },
+      {
+        "id": "view_2",
+        "type": "image",
+        "label": "四分之三正面",
+        "role": "turnaround",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.225,
+          "y": 0.16,
+          "w": 0.17,
+          "h": 0.72
+        }
+      },
+      {
+        "id": "view_3",
+        "type": "image",
+        "label": "侧面",
+        "role": "turnaround",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.415,
+          "y": 0.16,
+          "w": 0.17,
+          "h": 0.72
+        }
+      },
+      {
+        "id": "view_4",
+        "type": "image",
+        "label": "背面",
+        "role": "turnaround",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.605,
+          "y": 0.16,
+          "w": 0.17,
+          "h": 0.72
+        }
+      },
+      {
+        "id": "view_5",
+        "type": "image",
+        "label": "四分之三背面",
+        "role": "turnaround",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.795,
+          "y": 0.16,
+          "w": 0.17,
+          "h": 0.72
+        }
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": "多视图标题",
+        "role": "title",
+        "rect": {
+          "x": 0.035,
+          "y": 0.035,
+          "w": 0.93,
+          "h": 0.085
+        }
+      },
+      {
+        "id": "notes",
+        "type": "text",
+        "label": "设计说明",
+        "role": "notes",
+        "rect": {
+          "x": 0.035,
+          "y": 0.9,
+          "w": 0.93,
+          "h": 0.065
+        }
+      }
+    ]
+  },
+  "style": {
+    "background": "theme",
+    "panel": "theme",
+    "accent": "theme",
+    "frame_radius": 0.012,
+    "frame_border": true,
+    "safe_area": 0.035
+  },
+  "usage": {
+    "recommended_images": 5
+  },
+  "metadata": {
+    "pack": "FrameDeck Template Pack T-01",
+    "version": "1.0"
+  }
+}

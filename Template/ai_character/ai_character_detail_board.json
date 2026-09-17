@@ -1,0 +1,157 @@
+{
+  "schema": "framedeck.template",
+  "schema_version": 1,
+  "id": "ai.character.detail_board",
+  "name": "角色细节开发板",
+  "short_name": "角色细节",
+  "category": "ai_character",
+  "description": "一张角色主图搭配六个局部框，用于服装、妆面、材质、鞋履和配饰开发。",
+  "fallback_settings": {
+    "rows": 2,
+    "cols": 4,
+    "page_size": "16:9",
+    "image_mode": "裁剪填充",
+    "show_title": true,
+    "title_text": "角色细节开发 / CHARACTER DETAIL DEVELOPMENT",
+    "subtitle_text": "Costume · Makeup · Material · Accessories",
+    "title_height": 1.15,
+    "logo_path": "",
+    "show_footer": true,
+    "footer_text": "PROJECT / CHARACTER / DETAIL VERSION",
+    "show_filename": false,
+    "show_index": false,
+    "show_page_number": true,
+    "add_border": true,
+    "margin_left": 0.75,
+    "margin_right": 0.75,
+    "margin_top": 0.55,
+    "margin_bottom": 0.62,
+    "gap_x": 0.28,
+    "gap_y": 0.28,
+    "label_height": 0.38
+  },
+  "layout": {
+    "mode": "frames",
+    "coordinate_space": "normalized_slide",
+    "frames": [
+      {
+        "id": "hero",
+        "type": "image",
+        "label": "角色主图",
+        "role": "hero",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.035,
+          "y": 0.15,
+          "w": 0.47,
+          "h": 0.79
+        }
+      },
+      {
+        "id": "detail_1",
+        "type": "image",
+        "label": "面部细节",
+        "role": "detail",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.535,
+          "y": 0.15,
+          "w": 0.19,
+          "h": 0.23
+        }
+      },
+      {
+        "id": "detail_2",
+        "type": "image",
+        "label": "发型 / 头部",
+        "role": "detail",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.755,
+          "y": 0.15,
+          "w": 0.19,
+          "h": 0.23
+        }
+      },
+      {
+        "id": "detail_3",
+        "type": "image",
+        "label": "上装结构",
+        "role": "detail",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.535,
+          "y": 0.415,
+          "w": 0.19,
+          "h": 0.23
+        }
+      },
+      {
+        "id": "detail_4",
+        "type": "image",
+        "label": "手部 / 配饰",
+        "role": "detail",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.755,
+          "y": 0.415,
+          "w": 0.19,
+          "h": 0.23
+        }
+      },
+      {
+        "id": "detail_5",
+        "type": "image",
+        "label": "下装结构",
+        "role": "detail",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.535,
+          "y": 0.68,
+          "w": 0.19,
+          "h": 0.23
+        }
+      },
+      {
+        "id": "detail_6",
+        "type": "image",
+        "label": "鞋履 / 材质",
+        "role": "detail",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.755,
+          "y": 0.68,
+          "w": 0.19,
+          "h": 0.23
+        }
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": "细节开发标题",
+        "role": "title",
+        "rect": {
+          "x": 0.035,
+          "y": 0.035,
+          "w": 0.91,
+          "h": 0.085
+        }
+      }
+    ]
+  },
+  "style": {
+    "background": "theme",
+    "panel": "theme",
+    "accent": "theme",
+    "frame_radius": 0.012,
+    "frame_border": true,
+    "safe_area": 0.035
+  },
+  "usage": {
+    "recommended_images": 7
+  },
+  "metadata": {
+    "pack": "FrameDeck Template Pack T-01",
+    "version": "1.0"
+  }
+}

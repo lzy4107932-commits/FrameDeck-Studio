@@ -1,0 +1,131 @@
+{
+  "schema": "framedeck.template",
+  "schema_version": 1,
+  "id": "film.visual.development_board",
+  "name": "电影视觉开发提案板",
+  "short_name": "电影视觉开发",
+  "category": "film_visual",
+  "description": "一张主视觉搭配四张辅助视觉，适用于角色、场景、道具、氛围、色彩和导演视觉提案。",
+  "fallback_settings": {
+    "rows": 2,
+    "cols": 3,
+    "page_size": "16:9",
+    "image_mode": "裁剪填充",
+    "show_title": true,
+    "title_text": "电影视觉开发 / FILM VISUAL DEVELOPMENT",
+    "subtitle_text": "Director Pitch · Visual Development",
+    "title_height": 1.15,
+    "logo_path": "",
+    "show_footer": true,
+    "footer_text": "PROJECT / SEQUENCE / VISUAL DIRECTION / VERSION",
+    "show_filename": false,
+    "show_index": false,
+    "show_page_number": true,
+    "add_border": true,
+    "margin_left": 0.75,
+    "margin_right": 0.75,
+    "margin_top": 0.55,
+    "margin_bottom": 0.62,
+    "gap_x": 0.28,
+    "gap_y": 0.28,
+    "label_height": 0.38
+  },
+  "layout": {
+    "mode": "frames",
+    "coordinate_space": "normalized_slide",
+    "frames": [
+      {
+        "id": "hero",
+        "type": "image",
+        "label": "主视觉",
+        "role": "hero",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.035,
+          "y": 0.145,
+          "w": 0.62,
+          "h": 0.78
+        }
+      },
+      {
+        "id": "support_1",
+        "type": "image",
+        "label": "辅助视觉 1",
+        "role": "support",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.685,
+          "y": 0.145,
+          "w": 0.28,
+          "h": 0.235
+        }
+      },
+      {
+        "id": "support_2",
+        "type": "image",
+        "label": "辅助视觉 2",
+        "role": "support",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.685,
+          "y": 0.405,
+          "w": 0.135,
+          "h": 0.205
+        }
+      },
+      {
+        "id": "support_3",
+        "type": "image",
+        "label": "辅助视觉 3",
+        "role": "support",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.83,
+          "y": 0.405,
+          "w": 0.135,
+          "h": 0.205
+        }
+      },
+      {
+        "id": "support_4",
+        "type": "image",
+        "label": "材质 / 氛围",
+        "role": "support",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.685,
+          "y": 0.635,
+          "w": 0.28,
+          "h": 0.29
+        }
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": "视觉开发标题",
+        "role": "title",
+        "rect": {
+          "x": 0.035,
+          "y": 0.035,
+          "w": 0.93,
+          "h": 0.085
+        }
+      }
+    ]
+  },
+  "style": {
+    "background": "theme",
+    "panel": "theme",
+    "accent": "theme",
+    "frame_radius": 0.012,
+    "frame_border": true,
+    "safe_area": 0.035
+  },
+  "usage": {
+    "recommended_images": 5
+  },
+  "metadata": {
+    "pack": "FrameDeck Template Pack T-01",
+    "version": "1.0"
+  }
+}

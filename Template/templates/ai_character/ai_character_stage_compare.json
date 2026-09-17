@@ -1,0 +1,166 @@
+{
+  "schema": "framedeck.template",
+  "schema_version": 1,
+  "id": "ai.character.stage_compare",
+  "name": "角色剧情阶段对比板",
+  "short_name": "阶段对比",
+  "category": "ai_character",
+  "description": "四个角色阶段并列，比较不同剧情节点中的服装、状态、损耗和气质变化。",
+  "fallback_settings": {
+    "rows": 1,
+    "cols": 4,
+    "page_size": "16:9",
+    "image_mode": "保持比例",
+    "show_title": true,
+    "title_text": "角色剧情阶段对比 / CHARACTER STAGE COMPARISON",
+    "subtitle_text": "Stage 01 · Stage 02 · Stage 03 · Stage 04",
+    "title_height": 1.15,
+    "logo_path": "",
+    "show_footer": true,
+    "footer_text": "PROJECT / CHARACTER ARC / VERSION",
+    "show_filename": false,
+    "show_index": false,
+    "show_page_number": true,
+    "add_border": true,
+    "margin_left": 0.75,
+    "margin_right": 0.75,
+    "margin_top": 0.55,
+    "margin_bottom": 0.62,
+    "gap_x": 0.28,
+    "gap_y": 0.28,
+    "label_height": 0.38
+  },
+  "layout": {
+    "mode": "frames",
+    "coordinate_space": "normalized_slide",
+    "frames": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "阶段对比标题",
+        "role": "title",
+        "rect": {
+          "x": 0.035,
+          "y": 0.035,
+          "w": 0.93,
+          "h": 0.09
+        }
+      },
+      {
+        "id": "stage_1",
+        "type": "image",
+        "label": "剧情阶段 1",
+        "role": "stage",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.035,
+          "y": 0.17,
+          "w": 0.21,
+          "h": 0.67
+        }
+      },
+      {
+        "id": "stage_note_1",
+        "type": "text",
+        "label": "阶段 1 说明",
+        "role": "caption",
+        "rect": {
+          "x": 0.035,
+          "y": 0.855,
+          "w": 0.21,
+          "h": 0.095
+        }
+      },
+      {
+        "id": "stage_2",
+        "type": "image",
+        "label": "剧情阶段 2",
+        "role": "stage",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.275,
+          "y": 0.17,
+          "w": 0.21,
+          "h": 0.67
+        }
+      },
+      {
+        "id": "stage_note_2",
+        "type": "text",
+        "label": "阶段 2 说明",
+        "role": "caption",
+        "rect": {
+          "x": 0.275,
+          "y": 0.855,
+          "w": 0.21,
+          "h": 0.095
+        }
+      },
+      {
+        "id": "stage_3",
+        "type": "image",
+        "label": "剧情阶段 3",
+        "role": "stage",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.515,
+          "y": 0.17,
+          "w": 0.21,
+          "h": 0.67
+        }
+      },
+      {
+        "id": "stage_note_3",
+        "type": "text",
+        "label": "阶段 3 说明",
+        "role": "caption",
+        "rect": {
+          "x": 0.515,
+          "y": 0.855,
+          "w": 0.21,
+          "h": 0.095
+        }
+      },
+      {
+        "id": "stage_4",
+        "type": "image",
+        "label": "剧情阶段 4",
+        "role": "stage",
+        "image_mode": "保持比例",
+        "rect": {
+          "x": 0.755,
+          "y": 0.17,
+          "w": 0.21,
+          "h": 0.67
+        }
+      },
+      {
+        "id": "stage_note_4",
+        "type": "text",
+        "label": "阶段 4 说明",
+        "role": "caption",
+        "rect": {
+          "x": 0.755,
+          "y": 0.855,
+          "w": 0.21,
+          "h": 0.095
+        }
+      }
+    ]
+  },
+  "style": {
+    "background": "theme",
+    "panel": "theme",
+    "accent": "theme",
+    "frame_radius": 0.012,
+    "frame_border": true,
+    "safe_area": 0.035
+  },
+  "usage": {
+    "recommended_images": 4
+  },
+  "metadata": {
+    "pack": "FrameDeck Template Pack T-01",
+    "version": "1.0"
+  }
+}

@@ -1,0 +1,23 @@
+FrameDeck Studio UI-05-38A HEIF / HEIC 打包说明
+
+1. 打包前在用于打包的 Python 环境安装：
+   python -m pip install --upgrade pillow-heif
+
+2. PyInstaller 建议增加：
+   --collect-all pillow_heif
+
+3. 示例：
+   pyinstaller main.py --noconfirm --windowed --collect-all pillow_heif
+
+4. 如果使用 .spec 文件，可加入：
+   from PyInstaller.utils.hooks import collect_all
+   datas, binaries, hiddenimports = collect_all("pillow_heif")
+
+   然后将 datas / binaries / hiddenimports 合并到 Analysis。
+
+5. 打包完成后必须在没有安装 Python 的电脑上测试：
+   - HEIC 文件选择
+   - 文件夹批量导入
+   - 右侧缩略图
+   - 中央画布
+   - PPT / PDF / PNG 导出

@@ -1,0 +1,33 @@
+{
+  "schema": "framedeck.template",
+  "schema_version": 1,
+  "id": "category.unique_template",
+  "name": "模板名称",
+  "short_name": "模板短名称",
+  "category": "ai_character",
+  "description": "模板用途",
+  "fallback_settings": {
+    "rows": 2,
+    "cols": 3,
+    "page_size": "16:9",
+    "image_mode": "裁剪填充"
+  },
+  "layout": {
+    "mode": "frames",
+    "coordinate_space": "normalized_slide",
+    "frames": [
+      {
+        "id": "hero",
+        "type": "image",
+        "role": "hero",
+        "label": "主视觉",
+        "rect": {
+          "x": 0.04,
+          "y": 0.15,
+          "w": 0.6,
+          "h": 0.75
+        }
+      }
+    ]
+  }
+}

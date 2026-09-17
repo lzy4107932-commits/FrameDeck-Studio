@@ -1,0 +1,216 @@
+{
+  "schema": "framedeck.template",
+  "schema_version": 1,
+  "id": "ai.character.quick_cards",
+  "name": "角色候选快速展示板",
+  "short_name": "角色卡",
+  "category": "ai_character",
+  "description": "一页六个角色候选卡，适合群像、演员参考、造型初选和导演快速比较。",
+  "fallback_settings": {
+    "rows": 2,
+    "cols": 3,
+    "page_size": "16:9",
+    "image_mode": "裁剪填充",
+    "show_title": true,
+    "title_text": "角色候选方案 / CHARACTER OPTIONS",
+    "subtitle_text": "Casting · Styling · Character Direction",
+    "title_height": 1.15,
+    "logo_path": "",
+    "show_footer": true,
+    "footer_text": "PROJECT / OPTIONS / REVIEW VERSION",
+    "show_filename": false,
+    "show_index": false,
+    "show_page_number": true,
+    "add_border": true,
+    "margin_left": 0.75,
+    "margin_right": 0.75,
+    "margin_top": 0.55,
+    "margin_bottom": 0.62,
+    "gap_x": 0.28,
+    "gap_y": 0.28,
+    "label_height": 0.38
+  },
+  "layout": {
+    "mode": "frames",
+    "coordinate_space": "normalized_slide",
+    "frames": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "角色候选标题",
+        "role": "title",
+        "rect": {
+          "x": 0.035,
+          "y": 0.035,
+          "w": 0.915,
+          "h": 0.08
+        }
+      },
+      {
+        "id": "character_1",
+        "type": "image",
+        "label": "角色候选 1",
+        "role": "character_card",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.035,
+          "y": 0.155,
+          "w": 0.285,
+          "h": 0.31
+        }
+      },
+      {
+        "id": "note_1",
+        "type": "text",
+        "label": "角色 1 信息",
+        "role": "caption",
+        "rect": {
+          "x": 0.035,
+          "y": 0.475,
+          "w": 0.285,
+          "h": 0.065
+        }
+      },
+      {
+        "id": "character_2",
+        "type": "image",
+        "label": "角色候选 2",
+        "role": "character_card",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.35,
+          "y": 0.155,
+          "w": 0.285,
+          "h": 0.31
+        }
+      },
+      {
+        "id": "note_2",
+        "type": "text",
+        "label": "角色 2 信息",
+        "role": "caption",
+        "rect": {
+          "x": 0.35,
+          "y": 0.475,
+          "w": 0.285,
+          "h": 0.065
+        }
+      },
+      {
+        "id": "character_3",
+        "type": "image",
+        "label": "角色候选 3",
+        "role": "character_card",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.665,
+          "y": 0.155,
+          "w": 0.285,
+          "h": 0.31
+        }
+      },
+      {
+        "id": "note_3",
+        "type": "text",
+        "label": "角色 3 信息",
+        "role": "caption",
+        "rect": {
+          "x": 0.665,
+          "y": 0.475,
+          "w": 0.285,
+          "h": 0.065
+        }
+      },
+      {
+        "id": "character_4",
+        "type": "image",
+        "label": "角色候选 4",
+        "role": "character_card",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.035,
+          "y": 0.56,
+          "w": 0.285,
+          "h": 0.31
+        }
+      },
+      {
+        "id": "note_4",
+        "type": "text",
+        "label": "角色 4 信息",
+        "role": "caption",
+        "rect": {
+          "x": 0.035,
+          "y": 0.8800000000000001,
+          "w": 0.285,
+          "h": 0.065
+        }
+      },
+      {
+        "id": "character_5",
+        "type": "image",
+        "label": "角色候选 5",
+        "role": "character_card",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.35,
+          "y": 0.56,
+          "w": 0.285,
+          "h": 0.31
+        }
+      },
+      {
+        "id": "note_5",
+        "type": "text",
+        "label": "角色 5 信息",
+        "role": "caption",
+        "rect": {
+          "x": 0.35,
+          "y": 0.8800000000000001,
+          "w": 0.285,
+          "h": 0.065
+        }
+      },
+      {
+        "id": "character_6",
+        "type": "image",
+        "label": "角色候选 6",
+        "role": "character_card",
+        "image_mode": "裁剪填充",
+        "rect": {
+          "x": 0.665,
+          "y": 0.56,
+          "w": 0.285,
+          "h": 0.31
+        }
+      },
+      {
+        "id": "note_6",
+        "type": "text",
+        "label": "角色 6 信息",
+        "role": "caption",
+        "rect": {
+          "x": 0.665,
+          "y": 0.8800000000000001,
+          "w": 0.285,
+          "h": 0.065
+        }
+      }
+    ]
+  },
+  "style": {
+    "background": "theme",
+    "panel": "theme",
+    "accent": "theme",
+    "frame_radius": 0.012,
+    "frame_border": true,
+    "safe_area": 0.035
+  },
+  "usage": {
+    "recommended_images": 6
+  },
+  "metadata": {
+    "pack": "FrameDeck Template Pack T-01",
+    "version": "1.0"
+  }
+}

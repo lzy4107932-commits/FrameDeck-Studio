@@ -1,0 +1,54 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Generated packaging output
+build/
+dist/
+build_logs/
+build_archive/
+installer/output/
+release/
+*.spec
+
+# Local editor / OS state
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+
+# Rename this back to .git only when restoring the imported baseline.
+.phase0_git_baseline/
+development_archive/
+FrameDeck_UI05_38A_HEIF_Support/
+
+# Local release reports and development notes
+PACKAGING_REPORT.txt
+RELEASE_REGRESSION_REPORT.txt
+CURRENT_STABLE_BASELINE.txt
+PHASE_*.md
+README.txt
+README_V12.txt
+README_BUILD.txt
+
+# User projects and generated exports
+*.fds
+*.pptx
+*.pptm
+*.pdf
+*.heic
+*.heif
+*.dmg
+*.msi
+
+# Credentials and signing material
+.env
+*.p12
+*.pfx
+*.cer
+*.key
