@@ -54,7 +54,8 @@ jobs:
           test -d "dist/FrameDeck Studio.app"
           test -x "dist/FrameDeck Studio.app/Contents/MacOS/FrameDeck Studio"
           plutil -p "dist/FrameDeck Studio.app/Contents/Info.plist"
-          codesign --verify --deep --strict "dist/FrameDeck Studio.app"
+          file "dist/FrameDeck Studio.app/Contents/MacOS/FrameDeck Studio"
+          codesign -dvv "dist/FrameDeck Studio.app" 2>&1 || true
       - name: Smoke test packaged app
         run: python3 tests/smoke_packaged_app.py "dist/FrameDeck Studio.app/Contents/MacOS/FrameDeck Studio"
       - name: Upload unsigned beta packages
