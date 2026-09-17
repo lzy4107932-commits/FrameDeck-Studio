@@ -60,14 +60,21 @@ See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for dependency notices.
 
 ## macOS unsigned beta
 
-An automated macOS beta build is available through GitHub Actions and planned
-pre-releases. It creates a native application bundle, ZIP, and DMG on a real
-GitHub-hosted macOS runner. The artifact name includes the runner architecture
-(arm64 or x86_64).
+Download the [v12.0.0 macOS Beta 1 pre-release](https://github.com/lzy4107932-commits/FrameDeck-Studio/releases/tag/v12.0.0-macos-beta.1).
+
+- **DMG**: recommended for normal installation.
+- **ZIP**: contains the application bundle directly.
+- **Architecture**: Apple Silicon ARM64 (M1, M2, M3, M4, and later).
+- **Minimum configured version**: macOS 12.
 
 This beta is not code-signed or notarized and has not yet been manually tested
-on a physical Mac. See MACOS_BETA_TESTING.md before installing or reporting
-results.
+on a physical Mac. Gatekeeper may block its first launch. Control-click or
+right-click the application in Finder, choose **Open**, and confirm. Do not
+disable Gatekeeper system-wide.
+
+Read the [macOS beta testing guide](MACOS_BETA_TESTING.md) before installing.
+Report a problem with the repository's **macOS Beta problem** issue form. Do
+not upload confidential projects or private source images.
 
 Build locally on macOS with:
 

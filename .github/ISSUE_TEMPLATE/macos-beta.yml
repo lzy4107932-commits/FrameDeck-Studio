@@ -1,0 +1,106 @@
+name: macOS Beta problem
+description: Report a problem found while testing the unsigned macOS Beta.
+title: "[macOS Beta] "
+labels:
+  - macOS
+  - beta
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing FrameDeck Studio. Do not upload confidential
+        projects, private images, passwords, or other sensitive information.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I downloaded the package from the official GitHub pre-release.
+          required: true
+        - label: I checked for an existing issue describing the same problem.
+          required: true
+        - label: I can reproduce the problem without sharing private material.
+          required: true
+
+  - type: dropdown
+    id: processor
+    attributes:
+      label: Mac processor
+      options:
+        - Apple M1
+        - Apple M2
+        - Apple M3
+        - Apple M4 or later
+        - Intel Mac
+        - Unknown
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Mac model
+      placeholder: "Example: MacBook Air 13-inch, M2, 2022"
+    validations:
+      required: true
+
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "Example: macOS 15.6.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package used
+      options:
+        - FrameDeck-Studio-v12.0.0-macOS-arm64.dmg
+        - FrameDeck-Studio-v12.0.0-macOS-arm64.zip
+        - Source code
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest repeatable sequence of actions.
+      placeholder: |
+        1. Open FrameDeck Studio
+        2. Import ...
+        3. Select ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Remove personal paths and private content before attaching.
+      placeholder: Logs are under ~/Library/Application Support/FrameDeck Studio/logs
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Include whether the issue happens every time and any workaround.
