@@ -15,6 +15,7 @@ build_archive/
 installer/output/
 release/
 *.spec
+!FrameDeck Studio V12 Stable.spec
 
 # Local editor / OS state
 .idea/
@@ -38,6 +39,7 @@ README_BUILD.txt
 
 # User projects and generated exports
 *.fds
+!tests/fixtures/minimal_v12.fds
 *.pptx
 *.pptm
 *.pdf
