@@ -35,7 +35,8 @@ def main() -> None:
     app.setApplicationName(APP_NAME)
     app.setApplicationDisplayName(f"{APP_NAME} V{APP_VERSION}")
     app.setOrganizationName("FrameDeck")
-    app.setWindowIcon(QIcon(resource_path("resources/icon.ico")))
+    icon_name = "icon.icns" if sys.platform == "darwin" else "icon.ico"
+    app.setWindowIcon(QIcon(resource_path(f"resources/{icon_name}")))
 
     install_exception_hook(show_fatal_error)
 

@@ -16,6 +16,7 @@ installer/output/
 release/
 *.spec
 !FrameDeck Studio V12 Stable.spec
+!FrameDeck Studio macOS.spec
 
 # Local editor / OS state
 .idea/

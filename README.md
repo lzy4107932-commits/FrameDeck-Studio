@@ -1,6 +1,6 @@
 # FrameDeck Studio
 
-FrameDeck Studio is a Windows desktop tool for arranging image collections
+FrameDeck Studio is a desktop tool for arranging image collections
 into PowerPoint, PDF, and page-image exports.
 
 ## v12.0.0 highlights
@@ -58,4 +58,18 @@ Portable output is written to `dist/`. Installer output is written to
 FrameDeck Studio source code is released under the [MIT License](LICENSE).
 See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for dependency notices.
 
-macOS packaging is planned as a separate follow-up release.
+## macOS unsigned beta
+
+An automated macOS beta build is available through GitHub Actions and planned
+pre-releases. It creates a native application bundle, ZIP, and DMG on a real
+GitHub-hosted macOS runner. The artifact name includes the runner architecture
+(arm64 or x86_64).
+
+This beta is not code-signed or notarized and has not yet been manually tested
+on a physical Mac. See MACOS_BETA_TESTING.md before installing or reporting
+results.
+
+Build locally on macOS with:
+
+    python3 -m pip install -r requirements-build.txt
+    bash build_macos.sh

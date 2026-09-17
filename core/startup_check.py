@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from core.app_paths import bundled_root
+from core.app_paths import bundled_root, user_data_dir
 
 
 REQUIRED_RESOURCES = [
@@ -20,9 +20,9 @@ def run_startup_checks() -> list[str]:
             warnings.append(f"缺少资源：{relative}")
 
     try:
-        test_dir = Path.home() / ".framedeck_write_test"
-        test_dir.write_text("ok", encoding="utf-8")
-        test_dir.unlink(missing_ok=True)
+        test_file = user_data_dir() / ".write_test"
+        test_file.write_text("ok", encoding="utf-8")
+        test_file.unlink(missing_ok=True)
     except Exception as exc:
         warnings.append(f"用户目录不可写：{exc}")
 

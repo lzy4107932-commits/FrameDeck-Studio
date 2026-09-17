@@ -22,6 +22,7 @@ from core.project_manager import (
     save_project_file,
 )
 from core.drag_protocol import decode_drag_rows, encode_drag_rows
+from core.app_paths import user_data_dir
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -108,6 +109,19 @@ class ProjectFormatRegressionTests(unittest.TestCase):
         self.assertEqual(normalize_project_path("demo.fds"), "demo.fds")
         self.assertEqual(normalize_project_path("demo"), "demo.fds")
 
+
+class AppPathsRegressionTests(unittest.TestCase):
+    def test_macos_uses_application_support(self):
+        with (
+            patch("core.app_paths.sys.platform", "darwin"),
+            patch("core.app_paths.Path.home", return_value=Path("/Users/tester")),
+            patch("pathlib.Path.mkdir"),
+        ):
+            path = user_data_dir()
+        self.assertEqual(
+            path,
+            Path("/Users/tester/Library/Application Support/FrameDeck Studio"),
+        )
 
 class DragProtocolRegressionTests(unittest.TestCase):
     def test_rows_are_normalized_and_round_trip(self):

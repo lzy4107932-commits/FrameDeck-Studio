@@ -8,3 +8,5 @@
 *.isl text eol=crlf
 *.png binary
 *.ico binary
+*.icns binary
+*.dmg binary

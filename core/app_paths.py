@@ -14,7 +14,9 @@ def bundled_root() -> Path:
 
 
 def user_data_dir() -> Path:
-    if os.name == "nt":
+    if sys.platform == "darwin":
+        base = Path.home() / "Library" / "Application Support"
+    elif os.name == "nt":
         base = Path(os.environ.get("APPDATA", Path.home()))
     else:
         base = Path.home() / ".config"

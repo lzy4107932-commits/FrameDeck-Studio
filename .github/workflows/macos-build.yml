@@ -1,0 +1,66 @@
+name: macOS Beta Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.py"
+      - "requirements*.txt"
+      - "FrameDeck Studio macOS.spec"
+      - "build_macos.sh"
+      - "resources/**"
+      - "Template/**"
+      - ".github/workflows/macos-build.yml"
+  pull_request:
+    paths:
+      - "**/*.py"
+      - "requirements*.txt"
+      - "FrameDeck Studio macOS.spec"
+      - "build_macos.sh"
+      - "resources/**"
+      - "Template/**"
+      - ".github/workflows/macos-build.yml"
+
+jobs:
+  build-macos:
+    runs-on: macos-14
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Show runner architecture
+        run: |
+          sw_vers
+          uname -m
+          python3 -c "import platform; print(platform.platform()); print(platform.machine())"
+      - name: Install dependencies
+        run: python3 -m pip install -r requirements-build.txt
+      - name: Run regressions
+        run: |
+          python3 -m unittest discover -s tests
+          python3 tests/integration_auto_layout_transaction.py
+          python3 tests/integration_editable_ppt_crop.py
+          python3 tests/integration_image_clipboard.py
+          python3 tests/integration_page_aware_image_drag.py
+          python3 tests/integration_theme_language.py
+      - name: Build app, ZIP, and DMG
+        run: bash build_macos.sh
+      - name: Verify bundle metadata
+        run: |
+          test -d "dist/FrameDeck Studio.app"
+          test -x "dist/FrameDeck Studio.app/Contents/MacOS/FrameDeck Studio"
+          plutil -p "dist/FrameDeck Studio.app/Contents/Info.plist"
+          codesign --verify --deep --strict "dist/FrameDeck Studio.app"
+      - name: Smoke test packaged app
+        run: python3 tests/smoke_packaged_app.py "dist/FrameDeck Studio.app/Contents/MacOS/FrameDeck Studio"
+      - name: Upload unsigned beta packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: FrameDeck-Studio-v12.0.0-macOS-${{ runner.arch }}-unsigned-beta
+          path: release/v12.0.0/macos-*/**
+          if-no-files-found: error
+          retention-days: 30
